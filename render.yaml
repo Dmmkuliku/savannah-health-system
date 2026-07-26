@@ -1,9 +1,18 @@
+databases:
+  - name: savannah-health-db
+    plan: free
+    region: oregon
+    databaseName: savannah_health
+    user: savannah
+
 services:
   - type: web
     name: savannah-health-system
     runtime: docker
     plan: free
     region: oregon
+    repo: https://github.com/Dmmkuliku/savannah-health-system
+    branch: main
     healthCheckPath: /up
     envVars:
       - key: APP_NAME
@@ -12,8 +21,6 @@ services:
         value: production
       - key: APP_DEBUG
         value: "false"
-      - key: APP_URL
-        sync: false
       - key: LOG_CHANNEL
         value: stderr
       - key: SESSION_DRIVER
@@ -36,11 +43,5 @@ services:
         generateValue: true
       - key: TRUSTED_PROXIES
         value: "*"
-
-  - type: pserv
-    name: savannah-health-db
-    runtime: postgres
-    plan: free
-    region: oregon
-    databaseName: savannah_health
-    user: savannah
+      - key: APP_URL
+        sync: false

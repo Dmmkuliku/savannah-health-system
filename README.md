@@ -12,9 +12,11 @@ Hospital management information system for Tanzanian health facilities.
 
 ## Live cloud
 
-- **GitHub:** (filled after push)
-- **Render:** Laravel app + Postgres (real backend)
-- **Vercel:** Public URL that proxies to Render automatically (`RENDER_BACKEND_URL`)
+- **GitHub:** https://github.com/Dmmkuliku/savannah-health-system
+- **Render (backend):** https://savannah-health-system.onrender.com
+- **Vercel (public entry):** set after deploy — proxies automatically to Render via `RENDER_BACKEND_URL`
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Dmmkuliku/savannah-health-system)
 
 ## First login (cloud & local)
 

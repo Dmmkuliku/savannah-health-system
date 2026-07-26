@@ -18,6 +18,13 @@
 /storage/*.key
 /storage/pail
 /vendor
+/tools
+pg-info.json
+render-cli.zip
+render-release.json
 Homestead.json
 Homestead.yaml
 Thumbs.db
+.vercel
+
+.vercel
