@@ -8,7 +8,7 @@
 <div class="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-brand-100 bg-white px-4 py-3 shadow-soft">
     <div>
         <p class="text-sm font-semibold text-ink-900">{{ $facilityName }}</p>
-        <p class="text-xs text-ink-700/70">{{ __('hospital.dashboard.shift_ready') }} · {{ now()->format('l') }}</p>
+        <p class="mp-muted text-xs font-semibold">{{ __('hospital.dashboard.shift_ready') }} · {{ now()->format('l') }}</p>
     </div>
     <div class="flex flex-wrap gap-2">
         <span class="mp-badge bg-brand-100 text-brand-800">{{ __('hospital.dashboard.queue_badge', ['count' => $waitingQueue]) }}</span>
@@ -39,7 +39,7 @@
 <div class="mt-6 grid gap-5 lg:grid-cols-3">
     <div class="mp-card lg:col-span-2">
         <h2 class="font-display text-xl text-ink-900">{{ __('hospital.dashboard.ops_snapshot') }}</h2>
-        <p class="mt-1 text-sm text-ink-700/70">{{ __('hospital.dashboard.front_desk_hint') }}</p>
+        <p class="mp-muted mt-1 text-sm font-medium">{{ __('hospital.dashboard.front_desk_hint') }}</p>
 
         <div class="mt-5 grid gap-3 sm:grid-cols-3">
             <div class="rounded-lg border border-brand-100 bg-brand-50/70 p-4">
@@ -77,7 +77,7 @@
             <ul class="mt-4 space-y-2">
                 @forelse($lowStockMedicines as $med)
                     <li class="flex items-center justify-between rounded-md bg-sand-50 px-3 py-2 text-sm">
-                        <span class="truncate pr-2">{{ $med->name }} <span class="text-ink-700/50">{{ $med->strength }}</span></span>
+                        <span class="truncate pr-2 font-medium">{{ $med->name }} <span class="mp-muted">{{ $med->strength }}</span></span>
                         <span class="mp-badge bg-red-100 text-red-700 shrink-0">{{ $med->stock_qty }} {{ $med->unit }}</span>
                     </li>
                 @empty

@@ -1,0 +1,45 @@
+============================================
+  SAVANNAH HEALTH SYSTEM — LOCAL SETUP
+  Working directory installer (Windows)
+============================================
+
+WHAT THIS FOLDER DOES
+  Installs and starts the hospital system on
+  this PC so ward/office laptops can use it.
+
+BEFORE YOU START
+  1. Install XAMPP (Apache + MySQL)
+     https://www.apachefriends.org/
+  2. Start Apache and MySQL from XAMPP Control Panel
+  3. Install PHP Composer (if not already)
+     https://getcomposer.org/
+  4. Install Node.js LTS (for frontend build)
+     https://nodejs.org/
+
+INSTALL (first time only)
+  Double-click:  1-INSTALL.bat
+
+START EVERY DAY
+  Double-click:  2-START.bat
+  Then open:     http://127.0.0.1:8000
+
+OTHER COMPUTERS ON HOSPITAL LAN
+  Open:  http://YOUR-SERVER-IP:8000
+  (Find IP with: ipconfig)
+
+ADMIN LOGIN (first install only)
+  Email:    admin@savannah.health
+  Password: Savannah@Admin1
+
+  After login → Staff Users → register doctors,
+  nurses, cashiers, lab, pharmacy, etc.
+
+ONLINE (cloud)
+  Vercel:  https://savannah-health-system.vercel.app
+  GitHub:  https://github.com/Dmmkuliku/savannah-health-system
+
+TROUBLESHOOTING
+  - If MySQL missing: install/start XAMPP MySQL
+  - If port 8000 busy: edit 2-START.bat to use 8080
+  - If page blank: run 1-INSTALL.bat again (npm build)
+============================================

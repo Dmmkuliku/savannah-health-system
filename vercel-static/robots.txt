@@ -1,0 +1,4 @@
+# Keep this folder free of PHP files.
+# Vercel rewrites all traffic to the Render Laravel backend.
+User-agent: *
+Allow: /

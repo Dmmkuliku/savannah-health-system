@@ -1,0 +1,15 @@
+{{-- Theme toggle: light / dark --}}
+<button type="button"
+        class="theme-toggle"
+        @click="$store.theme.toggle()"
+        :aria-label="$store.theme.mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+        title="Toggle light / dark mode">
+    <span x-show="$store.theme.mode !== 'dark'" class="inline-flex items-center gap-1.5">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        Dark
+    </span>
+    <span x-show="$store.theme.mode === 'dark'" class="inline-flex items-center gap-1.5" x-cloak>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        Light
+    </span>
+</button>

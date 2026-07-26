@@ -3,6 +3,7 @@ import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+    darkMode: 'class',
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
@@ -12,37 +13,43 @@ export default {
     theme: {
         extend: {
             colors: {
-                // Mint green brand palette (#98E8C8 core)
+                // Mint green — strong enough for readable UI accents
                 brand: {
-                    50: '#f2fbf7',
-                    100: '#e0f7ee',
-                    200: '#c3eedc',
-                    300: '#98e8c8',
-                    400: '#5fd4a8',
-                    500: '#36ba8a',
-                    600: '#259971',
-                    700: '#1e7a5c',
-                    800: '#1c614b',
-                    900: '#194f3e',
-                    950: '#0c2c23',
+                    50: '#f0faf5',
+                    100: '#d8f3e6',
+                    200: '#b4e6cf',
+                    300: '#7fd4b0',
+                    400: '#45bc8c',
+                    500: '#259971',
+                    600: '#1c7d5c',
+                    700: '#17634a',
+                    800: '#144f3c',
+                    900: '#113f31',
+                    950: '#0a241c',
                 },
                 sand: {
-                    50: '#f7faf8',
-                    100: '#eef5f1',
-                    200: '#d5e6dc',
-                    300: '#b0cebc',
-                    400: '#84ad94',
-                    500: '#5f8c71',
+                    50: '#f6f8f7',
+                    100: '#e9efec',
+                    200: '#d0ddd6',
+                    300: '#a9c0b4',
+                    400: '#7a9a88',
+                    500: '#587866',
+                },
+                // High-contrast readable text for all users
+                ink: {
+                    50: '#f4f7fa',
+                    100: '#e6ebf1',
+                    200: '#c8d2de',
+                    500: '#4a5d73',
+                    600: '#33465c',
+                    700: '#1f3348',
+                    800: '#132536',
+                    900: '#0b1724',
                 },
                 savanna: {
-                    gold: '#c4a35a',
-                    bark: '#5c4632',
-                    dusk: '#2a3d36',
-                },
-                ink: {
-                    700: '#243447',
-                    800: '#1a2736',
-                    900: '#111b27',
+                    gold: '#b8923f',
+                    bark: '#4a3726',
+                    dusk: '#1f322c',
                 },
             },
             fontFamily: {
@@ -50,11 +57,11 @@ export default {
                 display: ['"Fraunces"', ...defaultTheme.fontFamily.serif],
             },
             boxShadow: {
-                soft: '0 10px 40px -16px rgba(12, 44, 35, 0.28)',
+                soft: '0 10px 40px -16px rgba(10, 36, 28, 0.30)',
             },
             backgroundImage: {
                 'clinic-grid':
-                    'radial-gradient(circle at 1px 1px, rgba(54, 186, 138, 0.10) 1px, transparent 0)',
+                    'radial-gradient(circle at 1px 1px, rgba(37, 153, 113, 0.12) 1px, transparent 0)',
             },
         },
     },
