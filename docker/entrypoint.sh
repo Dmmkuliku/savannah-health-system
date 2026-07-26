@@ -1,14 +1,11 @@
-﻿#!/bin/bash
+#!/bin/bash
 set -e
-
 cd /var/www/html
 
-if [ -z "$APP_KEY" ]; then
-  echo "APP_KEY missing â€” generating temporary key"
-  php artisan key:generate --force --show > /tmp/appkey || true
+if [ -n "$DATABASE_URL" ] && [ -z "$DB_URL" ]; then
+  export DB_URL="$DATABASE_URL"
 fi
 
-# Prefer DATABASE_URL (Render Postgres) when provided
 php artisan config:clear || true
 php artisan migrate --force --no-interaction
 php artisan db:seed --force --no-interaction || true
