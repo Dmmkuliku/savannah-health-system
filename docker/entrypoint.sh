@@ -1,10 +1,10 @@
-#!/bin/bash
+﻿#!/bin/bash
 set -e
 
 cd /var/www/html
 
 if [ -z "$APP_KEY" ]; then
-  echo "APP_KEY missing — generating temporary key"
+  echo "APP_KEY missing â€” generating temporary key"
   php artisan key:generate --force --show > /tmp/appkey || true
 fi
 
