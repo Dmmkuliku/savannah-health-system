@@ -2,7 +2,7 @@
 
 Hospital management information system for Tanzanian health facilities.
 
-**Brand:** Savannah Health System · **Accent:** Tea green (`#D0F0C0`)
+**Brand:** Savannah Health System · **Accent:** Mint green (`#98E8C8`) with acacia trees & savannah snake motif
 
 ## Stack
 

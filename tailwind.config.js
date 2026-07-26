@@ -12,27 +12,32 @@ export default {
     theme: {
         extend: {
             colors: {
-                // Tea green brand palette (#D0F0C0 core)
+                // Mint green brand palette (#98E8C8 core)
                 brand: {
-                    50: '#f3fbf0',
-                    100: '#e5f6df',
-                    200: '#d0f0c0',
-                    300: '#a9dd91',
-                    400: '#7fc45e',
-                    500: '#5aa83d',
-                    600: '#44872e',
-                    700: '#376a27',
-                    800: '#2f5423',
-                    900: '#28461f',
-                    950: '#13260e',
+                    50: '#f2fbf7',
+                    100: '#e0f7ee',
+                    200: '#c3eedc',
+                    300: '#98e8c8',
+                    400: '#5fd4a8',
+                    500: '#36ba8a',
+                    600: '#259971',
+                    700: '#1e7a5c',
+                    800: '#1c614b',
+                    900: '#194f3e',
+                    950: '#0c2c23',
                 },
                 sand: {
-                    50: '#f7faf5',
-                    100: '#eef5ea',
-                    200: '#d9e8d1',
-                    300: '#b7d3a8',
-                    400: '#8fb874',
-                    500: '#6f9a54',
+                    50: '#f7faf8',
+                    100: '#eef5f1',
+                    200: '#d5e6dc',
+                    300: '#b0cebc',
+                    400: '#84ad94',
+                    500: '#5f8c71',
+                },
+                savanna: {
+                    gold: '#c4a35a',
+                    bark: '#5c4632',
+                    dusk: '#2a3d36',
                 },
                 ink: {
                     700: '#243447',
@@ -45,11 +50,11 @@ export default {
                 display: ['"Fraunces"', ...defaultTheme.fontFamily.serif],
             },
             boxShadow: {
-                soft: '0 10px 40px -16px rgba(37, 70, 31, 0.28)',
+                soft: '0 10px 40px -16px rgba(12, 44, 35, 0.28)',
             },
             backgroundImage: {
                 'clinic-grid':
-                    'radial-gradient(circle at 1px 1px, rgba(90, 168, 61, 0.10) 1px, transparent 0)',
+                    'radial-gradient(circle at 1px 1px, rgba(54, 186, 138, 0.10) 1px, transparent 0)',
             },
         },
     },

@@ -39,7 +39,11 @@ class HospitalSeeder extends Seeder
         FacilitySetting::setValue('facility_code', 'SHS');
         FacilitySetting::setValue('region', 'Dodoma');
         FacilitySetting::setValue('currency', 'TZS');
-        FacilitySetting::setValue('brand_color', 'tea_green');
+        FacilitySetting::setValue('brand_color', 'mint_green');
+        FacilitySetting::setValue('facility_type', 'Hospital');
+        FacilitySetting::setValue('district', 'Dodoma City');
+        FacilitySetting::setValue('phone', '+255 26 232 0000');
+        FacilitySetting::setValue('timezone', 'Africa/Dar_es_Salaam');
     }
 
     /**
@@ -88,11 +92,13 @@ class HospitalSeeder extends Seeder
     private function seedWardsAndBeds(array $departments): void
     {
         $wards = [
-            ['code' => 'MM', 'name' => 'Male Medical', 'gender' => 'male', 'department' => 'IMD', 'daily_rate' => 25000, 'beds' => 12],
-            ['code' => 'FM', 'name' => 'Female Medical', 'gender' => 'female', 'department' => 'IMD', 'daily_rate' => 25000, 'beds' => 12],
-            ['code' => 'PED-W', 'name' => 'Pediatric', 'gender' => 'pediatric', 'department' => 'PED', 'daily_rate' => 20000, 'beds' => 10],
-            ['code' => 'MAT-W', 'name' => 'Maternity', 'gender' => 'female', 'department' => 'MAT', 'daily_rate' => 30000, 'beds' => 10],
-            ['code' => 'SUR-W', 'name' => 'Surgical', 'gender' => 'mixed', 'department' => 'SUR', 'daily_rate' => 35000, 'beds' => 10],
+            ['code' => 'MM', 'name' => 'Male Medical Ward', 'gender' => 'male', 'department' => 'IMD', 'daily_rate' => 25000, 'beds' => 12],
+            ['code' => 'FM', 'name' => 'Female Medical Ward', 'gender' => 'female', 'department' => 'IMD', 'daily_rate' => 25000, 'beds' => 12],
+            ['code' => 'PED-W', 'name' => 'Pediatric Ward', 'gender' => 'pediatric', 'department' => 'PED', 'daily_rate' => 20000, 'beds' => 10],
+            ['code' => 'MAT-W', 'name' => 'Maternity Ward', 'gender' => 'female', 'department' => 'MAT', 'daily_rate' => 30000, 'beds' => 10],
+            ['code' => 'SUR-W', 'name' => 'Surgical Ward', 'gender' => 'mixed', 'department' => 'SUR', 'daily_rate' => 35000, 'beds' => 10],
+            ['code' => 'ICU', 'name' => 'Intensive Care Unit', 'gender' => 'mixed', 'department' => 'EMR', 'daily_rate' => 80000, 'beds' => 4],
+            ['code' => 'ISO', 'name' => 'Isolation Ward', 'gender' => 'mixed', 'department' => 'IMD', 'daily_rate' => 40000, 'beds' => 6],
         ];
 
         foreach ($wards as $wardDef) {
@@ -130,6 +136,11 @@ class HospitalSeeder extends Seeder
             ['code' => 'HEPB', 'name' => 'Hepatitis B (HBsAg)', 'category' => 'Serology', 'sample_type' => 'Blood', 'price' => 8000, 'unit' => '', 'normal_range' => 'Non-reactive'],
             ['code' => 'CREAT', 'name' => 'Creatinine', 'category' => 'Biochemistry', 'sample_type' => 'Blood', 'price' => 6000, 'unit' => 'mg/dL', 'normal_range' => '0.6-1.2'],
             ['code' => 'WIDAL', 'name' => 'Widal Test', 'category' => 'Serology', 'sample_type' => 'Blood', 'price' => 7000, 'unit' => '', 'normal_range' => 'Negative'],
+            ['code' => 'GRP', 'name' => 'Blood Group & Rh', 'category' => 'Hematology', 'sample_type' => 'Blood', 'price' => 5000, 'unit' => '', 'normal_range' => 'A/B/AB/O ±'],
+            ['code' => 'ESR', 'name' => 'ESR', 'category' => 'Hematology', 'sample_type' => 'Blood', 'price' => 4000, 'unit' => 'mm/hr', 'normal_range' => '0-20'],
+            ['code' => 'LFT', 'name' => 'Liver Function Tests', 'category' => 'Biochemistry', 'sample_type' => 'Blood', 'price' => 20000, 'unit' => '', 'normal_range' => 'Panel'],
+            ['code' => 'RPR', 'name' => 'Syphilis (RPR/VDRL)', 'category' => 'Serology', 'sample_type' => 'Blood', 'price' => 6000, 'unit' => '', 'normal_range' => 'Non-reactive'],
+            ['code' => 'TB-SPT', 'name' => 'AFB Sputum (TB)', 'category' => 'Microbiology', 'sample_type' => 'Sputum', 'price' => 8000, 'unit' => '', 'normal_range' => 'Negative'],
         ];
 
         foreach ($tests as $test) {
@@ -143,6 +154,9 @@ class HospitalSeeder extends Seeder
             ['code' => 'CXR', 'name' => 'Chest X-Ray', 'modality' => 'xray', 'price' => 25000],
             ['code' => 'ABD-US', 'name' => 'Abdominal Ultrasound', 'modality' => 'ultrasound', 'price' => 35000],
             ['code' => 'OBS-US', 'name' => 'Obstetric Ultrasound', 'modality' => 'ultrasound', 'price' => 40000],
+            ['code' => 'SKULL-XR', 'name' => 'Skull X-Ray', 'modality' => 'xray', 'price' => 20000],
+            ['code' => 'EXT-XR', 'name' => 'Extremity X-Ray', 'modality' => 'xray', 'price' => 18000],
+            ['code' => 'PEL-US', 'name' => 'Pelvic Ultrasound', 'modality' => 'ultrasound', 'price' => 35000],
         ];
 
         foreach ($services as $service) {
@@ -163,6 +177,11 @@ class HospitalSeeder extends Seeder
             ['code' => 'DIC-50', 'name' => 'Diclofenac', 'generic_name' => 'Diclofenac', 'category' => 'NSAID', 'form' => 'Tablet', 'strength' => '50mg', 'unit_price' => 80, 'stock_qty' => 750, 'reorder_level' => 75],
             ['code' => 'ZINC-20', 'name' => 'Zinc Sulphate', 'generic_name' => 'Zinc', 'category' => 'Supplement', 'form' => 'Tablet', 'strength' => '20mg', 'unit_price' => 50, 'stock_qty' => 400, 'reorder_level' => 50],
             ['code' => 'FE-SO4', 'name' => 'Ferrous Sulfate', 'generic_name' => 'Iron', 'category' => 'Supplement', 'form' => 'Tablet', 'strength' => '200mg', 'unit_price' => 60, 'stock_qty' => 350, 'reorder_level' => 40],
+            ['code' => 'CTX-250', 'name' => 'Ceftriaxone', 'generic_name' => 'Ceftriaxone', 'category' => 'Antibiotic', 'form' => 'Injection', 'strength' => '250mg', 'unit' => 'vial', 'unit_price' => 2500, 'stock_qty' => 200, 'reorder_level' => 40],
+            ['code' => 'ORS-ZINC', 'name' => 'ORS + Zinc pack', 'generic_name' => 'ORS/Zinc', 'category' => 'Rehydration', 'form' => 'Kit', 'strength' => 'Standard', 'unit' => 'kit', 'unit_price' => 800, 'stock_qty' => 300, 'reorder_level' => 50],
+            ['code' => 'TT', 'name' => 'Tetanus Toxoid', 'generic_name' => 'Tetanus toxoid', 'category' => 'Vaccine', 'form' => 'Injection', 'strength' => '0.5ml', 'unit' => 'dose', 'unit_price' => 1500, 'stock_qty' => 180, 'reorder_level' => 30],
+            ['code' => 'NS-500', 'name' => 'Normal Saline 0.9%', 'generic_name' => 'Sodium chloride', 'category' => 'IV Fluid', 'form' => 'Infusion', 'strength' => '500ml', 'unit' => 'bag', 'unit_price' => 1200, 'stock_qty' => 400, 'reorder_level' => 60],
+            ['code' => 'GLU-5', 'name' => 'Dextrose 5%', 'generic_name' => 'Dextrose', 'category' => 'IV Fluid', 'form' => 'Infusion', 'strength' => '500ml', 'unit' => 'bag', 'unit_price' => 1200, 'stock_qty' => 350, 'reorder_level' => 50],
         ];
 
         foreach ($medicines as $medicine) {
@@ -191,6 +210,10 @@ class HospitalSeeder extends Seeder
             ['code' => 'BED-PED', 'name' => 'Bed Day Fee - Pediatric', 'category' => 'Inpatient', 'price' => 20000],
             ['code' => 'BED-MAT', 'name' => 'Bed Day Fee - Maternity', 'category' => 'Inpatient', 'price' => 30000],
             ['code' => 'BED-SUR', 'name' => 'Bed Day Fee - Surgical', 'category' => 'Inpatient', 'price' => 35000],
+            ['code' => 'BED-ICU', 'name' => 'Bed Day Fee - ICU', 'category' => 'Inpatient', 'price' => 80000],
+            ['code' => 'BED-ISO', 'name' => 'Bed Day Fee - Isolation', 'category' => 'Inpatient', 'price' => 40000],
+            ['code' => 'CONS-EMR', 'name' => 'Emergency Consultation', 'category' => 'Consultation', 'price' => 10000],
+            ['code' => 'DEL-NOR', 'name' => 'Normal Delivery Package', 'category' => 'Maternity', 'price' => 75000],
         ];
 
         foreach ($charges as $charge) {
